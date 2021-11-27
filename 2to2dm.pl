@@ -44,9 +44,7 @@ while(<FP>){
 		$tm =~ /^(\d+)-(\d+)-(\d+)T(\d+):(\d+):(\d+)/;
 		my $utm = timegm($6, $5, $4, $3, $2-1, $1);
 		my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($utm);
-		$year = $year + 1900;
-		$mon  = $mon + 1;
-		my $timemsg = sprintf("%04d/%02d/%02d %02d:%02d:%02d",$year,$mon,$mday,$hour,$min,$sec);
+		my $timemsg = sprintf("%04d/%02d/%02d %02d:%02d:%02d",$year+1900,++$mon,$mday,$hour,$min,$sec);
 		print $timemsg;
 		next;
 	}
