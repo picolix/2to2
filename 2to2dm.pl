@@ -31,7 +31,7 @@ while(<FP>){
 		next;
 	}
 
-	if(/Domain Status: No Object Found/ eq 1){
+	if(/Domain Status: No Object Found/){
 		print ",";
 		next;
 	}
