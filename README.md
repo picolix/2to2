@@ -1,4 +1,4 @@
-# 2to2-domain-search
+# 2to2 domain-search
 
 Search for 2-letter 2-letter domains.  
 
